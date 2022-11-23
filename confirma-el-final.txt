@@ -1,0 +1,10 @@
+function confirmEnding(str, target) {
+  let posIni = str.length - target.length;
+  
+  if (str.substring(posIni,str.length)==target){
+    return true;
+  }
+  return false;
+}
+
+confirmEnding("Bastian", "n");

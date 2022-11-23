@@ -1,0 +1,12 @@
+function repeatStringNumTimes(str, num) {
+  let salida="";
+  if (num<=0){
+    return salida;
+  }
+  for(let i=1;i<=num;i++){
+    salida = salida + str;
+  }
+  return salida;
+}
+
+repeatStringNumTimes("abc", 3);

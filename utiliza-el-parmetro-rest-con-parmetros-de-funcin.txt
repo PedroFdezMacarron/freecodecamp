@@ -1,0 +1,10 @@
+const sum = (...args) => {
+  
+  return args.reduce((a, b) => a + b, 0);
+}
+
+otro ejemplo
+
+let myArray = [1, 2, 3];
+let arraySum = myArray.reduce((previous,current)=>previous+current);
+console.log(`Sum of array values is: ${arraySum}`);

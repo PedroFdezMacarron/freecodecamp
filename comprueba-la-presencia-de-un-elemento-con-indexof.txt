@@ -1,0 +1,13 @@
+function quickCheck(arr, elem) {
+  // Cambia solo el código debajo de esta línea
+let posicion = arr.indexOf(elem);
+if  (posicion !=-1) {
+  return true;
+}
+else {
+  return false;
+}
+  // Cambia solo el código encima de esta línea
+}
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));

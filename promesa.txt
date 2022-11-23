@@ -1,0 +1,11 @@
+const misDatos = [1,2,3,4,5];
+
+const getDatos = () => {
+  return new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      resolve(misDatos);
+    },1000);
+  });
+}
+
+getDatos().then((ldatos)=> console.log(ldatos));

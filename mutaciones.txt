@@ -1,0 +1,23 @@
+function mutation(arr) {
+  let primera=arr[0];
+  let segunda=arr[1];
+  
+  let encontrada=false;
+
+  for (let i=0;i<segunda.length;i++){
+    encontrada=false;
+    for(let j=0;j<primera.length;j++){
+        
+      if(segunda[i].toUpperCase()==primera[j].toUpperCase()){
+        encontrada=true;
+      }
+    }
+    if(encontrada==false){
+        return false;
+    }
+  }
+
+  return true;
+}
+
+mutation(["hello", "hey"]);

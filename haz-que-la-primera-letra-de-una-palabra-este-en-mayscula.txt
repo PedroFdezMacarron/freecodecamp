@@ -1,0 +1,26 @@
+function titleCase(str) {
+  let palabra="";
+  let frase="";
+  let j=0;
+  let i=0;
+  for(i=0;i<str.length;i++){
+    for(j=i;str[j]!=" " && j < str.length;j++){
+      if (j==i){
+        palabra = str[j].toUpperCase();
+      }else{
+        palabra = palabra + str[j].toLowerCase();
+      }
+    }
+    if (frase!=""){
+      frase = frase + " " +palabra;
+    }else{
+      frase = palabra;
+    }    
+    palabra="";
+    i=j;
+  }
+  
+  return frase;
+}
+
+titleCase("I'm a little tea pot");

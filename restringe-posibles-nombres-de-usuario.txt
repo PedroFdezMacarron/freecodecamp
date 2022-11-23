@@ -1,0 +1,33 @@
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; // Cambia esta línea
+let result = userCheck.test(username);
+
+Code Explanation
+^ - start of input
+[a-z] - first character is a letter
+[a-z]+ - following characters are letters
+\d*$ - input ends with 0 or more digits
+| - or
+^[a-z] - first character is a letter
+\d\d+ - following characters are 2 or more digits
+$ - end of input
+
+
+Recuerda que se utiliza el signo más + para buscar uno o más caracteres y el asterisco * para buscar cero o más caracteres. Esto es conveniente, pero a veces quieres coincidir con cierta gama de patrones.
+
+Puedes especificar el número inferior y superior de patrones utilizando especificadores de cantidad. Para los especificadores de cantidad utilizamos llaves ({ y }). Pon dos números entre las llaves - para el número inferior y superior de patrones.
+
+Por ejemplo, para que coincida con la letra a si aparece entre 3 y 5 veces en la cadena ah, la expresión regular debe ser /a{3,5}h/.
+
+let A4 = "aaaah";
+let A2 = "aah";
+let multipleA = /a{3,5}h/;
+multipleA.test(A4);
+multipleA.test(A2);
+La primera llamada a test devuelve true, mientras que la segunda devuelve false.
+
+
+
+[^...]	Coincide con cualquier carácter que no se incluya en el conjunto de caracteres especificado. Por ejemplo:
+[^a-f] coincide con cualquier carácter que no sea una letra de la a a la f
+Nota: En las expresiones regulares de las políticas de cumplimiento del contenido se distingue entre mayúsculas y minúsculas.
